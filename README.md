@@ -1,2 +1,2 @@
 # Knetk
-Linn ?Knekt control code using Node.js and SVG images
+Linn Knekt control code using Node.js and SVG images
