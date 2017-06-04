@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>	
+        <script src="javascript/snap.svg-min.js"></script>
+        <script type="text/javascript" src="javascript/socket.io.js"></script>
+        <script type="text/javascript" src="javascript/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="javascript/house.js"></script>
+
+        <link rel="shortcut icon"
+              href="images/Linn_favicon_Colour.png" />
+
+        <style>
+            body {
+                background-color: black;
+            }
+
+            #remote{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            html, body {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+            svg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+            }
+            
+            text {
+                cursor: default;
+            }
+        </style>
+         <title>Home Automation</title>
+	</head>
+
+	<body>
+        <div id="everything">
+            <svg id="remote" width="85mm" height="174mm" viewBox="0 0 350 616">
+                <ellipse style="fill:#cccccc;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                         id="path_background_grey_top"
+                         cx="150"
+                         cy="75.647919"
+                         rx="150"
+                         ry="75" />
+                <rect style="fill:#cccccc;stroke:none;stroke-opacity:1"
+                      id="path_background_grey_bottom"
+                      width="300"
+                      height="550"
+                      x="0"
+                      y="66.362213"
+                      ry="7.2944326" />
+            </svg>
+        </div>
+    </body>
+</html>

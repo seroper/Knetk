@@ -1,0 +1,2 @@
+C:\Users\Simon\Documents\Visual Studio 2017\Projects\Node_Knekt_SVG_Based\Node_Knekt_SVG_Based\obj\Debug\Node_Knekt_SVG_Based.njsprojResolveAssemblyReference.cache
+C:\Users\Simon\Documents\Visual Studio 2017\Projects\Node_Knekt_SVG_Based\Node_Knekt_SVG_Based\bin\Microsoft.NodejsTools.WebRole.dll

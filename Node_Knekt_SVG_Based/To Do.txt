@@ -1,0 +1,18 @@
+1) Sort naming and size for room buttons
+2) Sort naming and size for source buttons
+3) Add boarder to source buttons
+4) Add knekt actions to the buttons, source select, mute, volume.  Do volume by requesting increase and decrease, not absolute values, that's easier to do with live data coming back latter.  Just display the target, then actual, with the target/actual all in the server, pages just get a sinlge number.  Need something similar for mute as no toggle on that control....That or send value and don't allow another volume action until the page is updates, possible best so don't get ramp volume above desired.
+
+Rooms to have sound this version:
+S&S
+Olivia
+Bathroom
+Bella
+Si office
+Sonia office
+Lounge
+Dinning room
+Kitchen
+Conservatory
+Garage
+Shower room

@@ -1,0 +1,2 @@
+C:\Users\Simon\documents\visual studio 2017\Projects\Node_Web_Template\Node_Web_Template\obj\Debug\Node_Web_Template.njsprojResolveAssemblyReference.cache
+C:\Users\Simon\documents\visual studio 2017\Projects\Node_Web_Template\Node_Web_Template\bin\Microsoft.NodejsTools.WebRole.dll
