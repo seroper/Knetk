@@ -7,6 +7,7 @@ var Current_Room_ID = -1;
 //var event;
 //var attendQuery;  
 var Room_Count;
+var Source_Count;
 var Init_Done;
 // Y move 115 moved down 2 levels
 // Y move 57 moves down 1 level
@@ -22,12 +23,22 @@ var Room_Button_Positions = [
     /* 7 */ [  0,  57,   0,  57,   0,  57,  0,  57,   0,  57,    0,  57,  90,  57],
     /* 8 */ [  0,  57,   0,  57,   0,  57,  0,  57,   0,  57,    0,  57,  50,  57,  50,  57],
     /* 9 */ [  0,  57,   0,  57,   0,  57,  0,  57,   0,  57,    0,  57,   0,  57,   0,  57,   0,  57],
-    /*10 */[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  90,   0],
-    /*11 */[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  50,   0,  50,  0],
-    /*12 */[   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  90,   0,  0,   0,    0,  0]
+    /*10 */ [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  90,   0],
+    /*11 */ [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  50,   0,  50,  0],
+    /*12 */ [  0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,   0,  90,   0,  0,   0,    0,  0]
     /*        x1,  y1,  x2,  y2,  x3,  y3,  x4,  y4,  x5,  y5,  x6,  y6,  x7,  y7,  x8,  y8,  x9,  y9, x10, y10, x11, y11, x12, y12 */
 ];
 
+var Source_Button_Positions = [
+    /* 1 */ [90, 115],
+    /* 2 */ [50, 115,  50, 115],
+    /* 3 */ [ 0, 115,   0, 115,   0, 115],
+    /* 4 */ [ 0,  57,   0,  57,   0,  57,  90,  57],
+    /* 5 */ [ 0,  57,   0,  57,   0,  57,  50,  57,  50,  57],
+    /* 6 */ [ 0,  57,   0,  57,   0,  57,   0,  57,   0,  57,   0,  57],
+    /* 7 */ [ 0,  57,   0,  57,   0,  57,   0,  57,   0,  57,   0,  57,  90,  57]
+    /*       x1,  y1,  x2,  y2,  x3,  y3,  x4,  y4,  x5,  y5,  x6,  y6,  x7,  y7 */
+];
 
 
 $(document).ready(function()
@@ -44,39 +55,51 @@ $(document).ready(function()
 
         var room = f.select('#group_room_1');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_2');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_3');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_4');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_5');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_6');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_7');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_8');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_9');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_10');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_11');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         room = f.select('#group_room_12');
         room.click(click_room);
+        room.dblclick(double_click_room);
 
         var source = f.select('#group_source_1');
         source.click(click_source);
@@ -161,7 +184,6 @@ Socket.on('settings_reply', function (data) {
             r.attr('display', 'none');
         }
 
-
         var pairs = Room_Button_Positions[Room_Count - 1];
         n = 0;
         jQuery.each(Settings.rooms, function () {
@@ -176,6 +198,59 @@ Socket.on('settings_reply', function (data) {
             var r = Snap.select(name);
             console.log("Room's name is " + this.name);
             r.attr({ text: this.name });
+            n++;
+        });
+
+        // First set the room buttons up depending on the data.
+        Source_Count = 0;
+        $.each(Settings.sources, function (i, item) {
+            Source_Count++;
+        });
+        console.log("Got " + Source_Count + " number of sources");
+
+        // Hide the rooms not in the settings
+        for (var n = Source_Count + 1; n <= 6; n++) {
+            var name = "#group_source_" + n;
+            var r = Snap.select(name);
+            r.attr('display', 'none');
+        }
+
+        var pairs = Source_Button_Positions[Source_Count - 1];
+        n = 0;
+        jQuery.each(Settings.sources, function () {
+            // Move the buttons to the correct location
+            var name = "#group_source_" + (n + 1);
+            var r = Snap.select(name);
+            var move = 't' + pairs[2 * n] + ', ' + pairs[2 * n + 1];
+            console.log("moving source " + name + " to positon " + move);
+            r.transform(move);
+
+            var name = "#text_source_" + (n + 1);
+            var r = Snap.select(name);
+            console.log("Source's name is " + this.name);
+            var lines = this.name.lastIndexOf("\n");
+            if (lines == -1) {
+                r.attr({ text: this.name });
+            }
+            else {
+                var word_1 = this.name.substring(0, lines);
+                var word_2 = this.name.substring(lines + 2);
+
+                r.attr.text.attr({ x: 0});
+/*                r.attr({
+                    text
+                    .attr('x', 0)
+                        .attr('y', 30)
+                        .append('svg:tspan')
+                        .attr('x', 0)
+                        .attr('dy', 5)
+                        .text(word_1)
+                        .append('svg:tspan')
+                        .attr('x', 0)
+                        .attr('dy', 20)
+                        .text(word_2)
+                });
+  */          }
             n++;
         });
 
@@ -197,16 +272,13 @@ Socket.on('settings_reply', function (data) {
 
 
 function click_room() {
-    var number = this.attr('id');
-    index = number.lastIndexOf("_");
-    number = number.substring(index + 1);
+    var id = this.attr('id');
+    index = id.lastIndexOf("_");
+    number = id.substring(index + 1);
 
     console.log("got click room ID:" + this.attr('id') + " number " + number);
     //alert("Clicked room number " + number);
-
-    var name = "#text_room_" + number;
-    var r = Snap.select(name);
-        
+    
     if (number-1 != Current_Room_ID) {
             //alert("Current room changed");
             console.log("Current room changed");
@@ -217,8 +289,10 @@ function click_room() {
             //Set_Mute();
             //Set_Source();
     }
-    else
-        alert("setting current room - shouldn't have got here!");
+}
+
+function double_click_room() {
+    alert("Toggle power");
 }
 
 function click_source()

@@ -56,7 +56,7 @@
         "radio_a": {
             "enabled": true,
             "type": "radio",
-            "name": "Radio A",
+            "name": "Radio\n  A",
             "power": "off",
             "relay_channel": 2,
             "mute": true,
@@ -68,7 +68,7 @@
         "radio_b": {
             "enabled": true,
             "type": "radio",
-            "name": "Radio B",
+            "name": "Radio\n  B",
             "power": "off",
             "relay_channel": 3,
             "mute": true,
@@ -80,7 +80,7 @@
         "squeezebox_a": {
             "enabled": true,
             "type": "squeezebox",
-            "name": "Simon's player",
+            "name": "Simon",
             "power": "off",
             "relay_channel": 0,
             "mute": true,
@@ -93,7 +93,7 @@
         "squeezebox_b": {
             "enabled": true,
             "type": "squeezebox",
-            "name": "Sonia's player",
+            "name": "Sonia",
             "power": "off",
             "relay_channel": 0,
             "mute": true,
@@ -106,7 +106,7 @@
         "squeezebox_c": {
             "enabled": true,
             "type": "squeezebox",
-            "name": "Isabella's player",
+            "name": "Bella",
             "power": "off",
             "relay_channel": 0,
             "mute": true,
@@ -119,7 +119,7 @@
         "squeezebox_d": {
             "enabled": true,
             "type": "squeezebox",
-            "name": "Olivia's player",
+            "name": "Olivia",
             "power": "off",
             "relay_channel": 0,
             "mute": true,
