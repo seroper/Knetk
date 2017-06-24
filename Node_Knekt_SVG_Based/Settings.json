@@ -1,224 +1,128 @@
 {
-    "rooms": {
-        "olivia": {
-            "enabled": false,
-            "name": "Olivia's",
-            "amplifier_type": "roomamp",
-            "power": "off",
-            "mute": false,
-            "volume_current": -1,
-            "volume_startup": 20,
-            "volume_increment": 1,
-            "volume_maximum": 60,
-            "volume_minimum": 0,
-            "source_current": "",
-            "source_startup": "radio_a",
-            "intersekt_channel": 1,
-            "knekt_source_input": 1,
-            "local_sources": { }
-        },
-        "bathroom": {
-            "enabled": true,
-            "name": "Bathroom",
-            "amplifier_type": "roomamp",
-            "power": "off",
-            "mute": false,
-            "volume_current": -1,
-            "volume_startup": 20,
-            "volume_increment": 1,
-            "volume_maximum": 60,
-            "volume_minimum": 0,
-            "source_current": "",
-            "source_startup": "radio_a",
-            "intersekt_channel": 2,
-            "knekt_source_input": 1,
-            "local_sources": { }
-        },
-      "isabella": {
-        "enabled": true,
-        "name": "Isabella's",
-        "amplifier_type": "roomamp",
-        "power": "off",
-        "mute": false,
-        "volume_current": -1,
-        "volume_startup": 20,
-        "volume_increment": 1,
-        "volume_maximum": 60,
-        "volume_minimum": 0,
-        "source_current": "",
-        "source_startup": "radio_a",
-        "intersekt_channel": 3,
-        "knekt_source_input": 1,
-        "local_sources": {}
-        }
+  "rooms": {
+    "bella": {
+      "enabled": true,
+      "name": "Bella's",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.53",
+      "power_switch_port": "49153",
+      "power_switch_name": "Bella Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 3,
+      "knekt_source_input": 1,
+      "local_sources": {}
     },
-    "sources": {
-        "radio_a": {
-            "enabled": true,
-            "type": "radio",
-            "name": "Radio\n  A",
-            "power": "off",
-            "relay_channel": 2,
-            "mute": true,
-            "intersekt_channel": 1,
-            "current_frequency": "preset_2_frequency",
-            "current_preset": "preset_1",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        },
-        "radio_b": {
-            "enabled": true,
-            "type": "radio",
-            "name": "Radio\n  B",
-            "power": "off",
-            "relay_channel": 3,
-            "mute": true,
-            "intersekt_channel": 2,
-            "current_frequency": "preset_2_frequency",
-            "current_preset": "preset_2",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        },
-        "squeezebox_a": {
-            "enabled": true,
-            "type": "squeezebox",
-            "name": "Simon",
-            "power": "off",
-            "relay_channel": 0,
-            "mute": true,
-            "intersekt_channel": 4,
-            "current_state": "off",
-            "current_song": "",
-            "current_artist": "",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        },
-        "squeezebox_b": {
-            "enabled": true,
-            "type": "squeezebox",
-            "name": "Sonia",
-            "power": "off",
-            "relay_channel": 0,
-            "mute": true,
-            "intersekt_channel": 5,
-            "current_state": "off",
-            "current_song": "",
-            "current_artist": "",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        },
-        "squeezebox_c": {
-            "enabled": true,
-            "type": "squeezebox",
-            "name": "Bella",
-            "power": "off",
-            "relay_channel": 0,
-            "mute": true,
-            "intersekt_channel": 6,
-            "current_state": "off",
-            "current_song": "",
-            "current_artist": "",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        },
-        "squeezebox_d": {
-            "enabled": true,
-            "type": "squeezebox",
-            "name": "Olivia",
-            "power": "off",
-            "relay_channel": 0,
-            "mute": true,
-            "intersekt_channel": 7,
-            "current_state": "off",
-            "current_song": "",
-            "current_artist": "",
-            "rooms_used_in": [ false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false ]
-        }
+    "olivia": {
+      "enabled": false,
+      "name": "Olivia's",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.55",
+      "power_switch_port": "49153",
+      "power_switch_name": "Olivia Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 1,
+      "knekt_source_input": 1,
+      "local_sources": {}
     },
-    "radio_presets": {
-        "preset_1": {
-            "enabled": true,
-            "name": "Radio 1",
-            "frequency": 97.5
-        },
-        "preset_2": {
-            "enabled": true,
-            "name": "Radio 2",
-            "frequency": 98.0
-        },
-        "preset_3": {
-            "enabled": true,
-            "name": "Radio 3",
-            "frequency": 98.5
-        },
-        "preset_4": {
-            "enabled": true,
-            "name": "Radio 4",
-            "frequency": 99.0
-        },
-        "preset_5": {
-            "enabled": true,
-            "name": "Radio 5",
-            "frequency": 99.5
-        },
-        "preset_6": {
-            "enabled": true,
-            "name": "Radio 6",
-            "frequency": 100.0
-        },
-        "preset_7": {
-            "enabled": true,
-            "name": "Radio 7",
-            "frequency": 100.5
-        },
-        "preset_8": {
-            "enabled": true,
-            "name": "Radio 8",
-            "frequency": 101.0
-        },
-        "preset_9": {
-            "enabled": true,
-            "name": "Radio 9",
-            "frequency": 101.5
-        },
-        "preset_10": {
-            "enabled": true,
-            "name": "Radio 10",
-            "frequency": 102.0
-        }
+    "bathroom": {
+      "enabled": true,
+      "name": "Bathroom",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.49",
+      "power_switch_port": "49154",
+      "power_switch_name": "Bathroom Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 2,
+      "knekt_source_input": 1,
+      "local_sources": {}
     },
-    "knekt": {
-        "intersekt_a": {
-            "id": 1,
-            "relay_channel": 1,
-            "arduino_port": 1,
-            "power": "off"
-        },
-        "intersekt_b": {
-            "id": 2,
-            "relay_channel": 1,
-            "arduino_port": 2,
-            "power": "off"
-        },
-        "relay_a": { 
-            "arduino_port":  3
-        }
+    "simon": {
+      "enabled": true,
+      "name": "Simon's",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.57",
+      "power_switch_port": "49153",
+      "power_switch_name": "Simon Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 2,
+      "knekt_source_input": 1,
+      "local_sources": {}
     },
-    "serial_ports": {
-        "a": {
-            "enabled": true,
-            "path": "/dev/ttyUSB0",
-            "baudrate": "57600",
-            "parity": "even",
-            "databits": 8,
-            "stopbits": 1,
-            "status": "closed",
-            "tx_message":  ""
-        },
-        "b": {
-            "enabled": false,
-            "path": "/dev/ttyUSB1",
-            "baudrate": "57600",
-            "parity": "even",
-            "databits": 8,
-            "stopbits": 1,
-            "status": "closed",
-            "tx_message":  ""
-        }
+    "sonia": {
+      "enabled": true,
+      "name": "Sonia's",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.48",
+      "power_switch_port": "49153",
+      "power_switch_name": "Sonia Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 2,
+      "knekt_source_input": 1,
+      "local_sources": {}
+    },
+    "kitchen": {
+      "enabled": true,
+      "name": "Kitchen",
+      "amplifier_type": "roomamp",
+      "power": false,
+      "power_switch_ip": "192.168.1.62",
+      "power_switch_port": "49153",
+      "power_switch_name": "Kitchen Amp",
+      "mute": false,
+      "volume_current": -1,
+      "volume_startup": 20,
+      "volume_increment": 1,
+      "volume_maximum": 60,
+      "volume_minimum": 0,
+      "source_current": "",
+      "source_startup": "radio_a",
+      "intersekt_channel": 2,
+      "knekt_source_input": 1,
+      "local_sources": {}
     }
+  },
+  "wemo_lights": {
+    "link_ip": "192.168.1.54",
+    "link_port":  49153
+  }
 }
