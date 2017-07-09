@@ -66,7 +66,7 @@
       "amplifier_type": "roomamp",
       "power": false,
       "power_switch_ip": "192.168.1.57",
-      "power_switch_port": "49153",
+      "power_switch_port": "49154",
       "power_switch_name": "Simon Amp",
       "mute": false,
       "volume_current": -1,
@@ -86,7 +86,7 @@
       "amplifier_type": "roomamp",
       "power": false,
       "power_switch_ip": "192.168.1.48",
-      "power_switch_port": "49153",
+      "power_switch_port": "49154",
       "power_switch_name": "Sonia Amp",
       "mute": false,
       "volume_current": -1,
@@ -105,7 +105,7 @@
       "name": "Kitchen",
       "amplifier_type": "roomamp",
       "power": false,
-      "power_switch_ip": "192.168.1.62",
+      "power_switch_ip": "192.168.1.29",
       "power_switch_port": "49153",
       "power_switch_name": "Kitchen Amp",
       "mute": false,
@@ -122,7 +122,7 @@
     }
   },
   "wemo_lights": {
-    "link_ip": "192.168.1.54",
-    "link_port":  49153
+    "link_ip": "192.168.1.23",
+    "link_port":  49154
   }
 }
